@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 
 import AppHeader from './components/app-header/';
 import SearchPanel from './components/search-panel/';
-import TodoList from './components/todo-list/todo-list';
+import TodoList from './components/todo-list/';
+import ItemStatusFilter from './components/item-status-filter/';
 
 const todoData = [
         {label: 'Drink Coffee', important: false, id: 1},
@@ -16,7 +17,16 @@ const el = (
     <div className = "row">
         <div className="mx-auto">
             <AppHeader />
-            <SearchPanel />
+            <div className="top-panel d-flex mb-2"> 
+                <div className="row">
+                    <div className="col-6">
+                        <SearchPanel />
+                    </div>
+                    <div className="col-4">
+                        <ItemStatusFilter / >
+                    </div>
+                </div>
+            </div>
             <TodoList todos={todoData} />
         </div>
 
