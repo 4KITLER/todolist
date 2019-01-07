@@ -13,10 +13,13 @@ const todoData = [
 
 
 const el = (
-    <div>
-        <AppHeader />
-        <SearchPanel />
-        <TodoList todos={todoData} />
+    <div className = "row">
+        <div className="mx-auto">
+            <AppHeader />
+            <SearchPanel />
+            <TodoList todos={todoData} />
+        </div>
+
     </div>
 );
 
